@@ -1,6 +1,6 @@
 # Version 14 Theme for Atuin
 
-An [Atuin](https://atuin.sh) shell-history theme built around the **Version 14** brand palette — the same palette used across the [Zed](https://github.com/version14/zed-theme), [VS Code](https://github.com/version14/vscode-theme), [Neovim/Vim](https://github.com/version14/nvim-theme), [Ghostty](https://github.com/version14/ghostty-theme), and [Starship](https://github.com/version14/starship-theme) ports.
+An [Atuin](https://atuin.sh) shell history theme built around the Version 14 brand palette, the same palette used across the [Zed](https://github.com/version14/zed-theme), [VS Code](https://github.com/version14/vscode-theme), [Neovim/Vim](https://github.com/version14/nvim-theme), [Ghostty](https://github.com/version14/ghostty-theme), and [Starship](https://github.com/version14/starship-theme) ports.
 
 ## Variants
 
@@ -10,9 +10,9 @@ An [Atuin](https://atuin.sh) shell-history theme built around the **Version 14**
 | **Version 14 Black** | `version14-black.toml` | `version14-black` |
 | **Version 14 Light** | `version14-light.toml` | `version14-light` |
 
-> **Note:** Atuin's theme schema has no background/elevation color role — it only styles text, alerts, and syntax highlighting inside its search UI, which otherwise inherits your terminal's background. Because of that, `version14` and `version14-black` are identical here (the Dark/Black distinction only matters for background colors elsewhere in the suite).
+> Atuin's theme schema has no background or elevation color role. It only styles text, alerts, and syntax highlighting inside its search UI, which otherwise inherits your terminal's background. `version14` and `version14-black` are therefore identical here.
 >
-> The violet accent (`Title`, `Important`, `SyntaxVariable`) is currently a **placeholder** hue, standing in for a retired lime-green accent while a permanent replacement is chosen.
+> The violet accent (`Title`, `Important`, `SyntaxVariable`) is a placeholder hue, standing in for a retired lime green accent while a permanent replacement is chosen.
 
 ## Installation
 
@@ -22,27 +22,33 @@ An [Atuin](https://atuin.sh) shell-history theme built around the **Version 14**
    curl -o ~/.config/atuin/themes/version14.toml \
      https://raw.githubusercontent.com/version14/atuin-theme/main/version14.toml
    ```
-   or clone the repo (`git clone https://github.com/version14/atuin-theme`) to grab all three at once.
+
+   Or clone the repo to grab all three at once:
+   ```sh
+   git clone https://github.com/version14/atuin-theme
+   ```
+
 2. In `~/.config/atuin/config.toml`, set:
    ```toml
    [theme]
    name = "version14"
    ```
-3. Restart your shell (or re-source it) to apply.
 
-### Verifying the install
+3. Restart your shell, or re-source it, to apply.
+
+Repeat with `version14-black` or `version14-light` for the other variants.
+
+## Verify
 
 ```sh
 atuin config get theme.name
 ```
 
-Should print `version14` (or whichever variant you set) — note this only confirms `config.toml` was edited correctly, not that the theme *file* was found. `atuin config get` doesn't validate the file exists, so if colors don't look right in the actual search UI, also double-check the file is really at `~/.config/atuin/themes/version14.toml` (or your `$ATUIN_THEME_DIR`).
-
-Repeat with `version14-black` or `version14-light` for the other variants.
+This confirms `config.toml` was edited correctly. It does not confirm the theme file itself was found, since `atuin config get` doesn't validate that the file exists. If colors don't look right in the search UI, check that the file is at `~/.config/atuin/themes/version14.toml` (or your `$ATUIN_THEME_DIR`).
 
 ## Color Roles
 
-Atuin themes map semantic **Meanings** to colors (see [Atuin's theming docs](https://docs.atuin.sh/cli/guide/theming/)):
+Atuin themes map semantic meanings to colors. See [Atuin's theming docs](https://docs.atuin.sh/cli/guide/theming/) for the full schema.
 
 | Meaning | Version 14 / Black | Version 14 Light |
 |---|---|---|
@@ -56,13 +62,14 @@ Atuin themes map semantic **Meanings** to colors (see [Atuin's theming docs](htt
 | `SyntaxFlag` | `#ED8EF3` | `#8C2293` |
 | `SyntaxOperator` | `#F2F4F6` | `#0D0F11` |
 
-## Also available for Zed, VS Code, Neovim/Vim, Ghostty, and Starship
+## Also available for
 
-- [Zed extension](https://github.com/version14/zed-theme)
-- [VS Code extension](https://github.com/version14/vscode-theme)
-- [Neovim/Vim plugin](https://github.com/version14/nvim-theme)
-- [Ghostty theme](https://github.com/version14/ghostty-theme)
-- [Starship palette](https://github.com/version14/starship-theme)
+- [Zed](https://github.com/version14/zed-theme)
+- [VS Code](https://github.com/version14/vscode-theme)
+- [Neovim/Vim](https://github.com/version14/nvim-theme)
+- [Ghostty](https://github.com/version14/ghostty-theme)
+- [Starship](https://github.com/version14/starship-theme)
+- [gh-dash](https://github.com/version14/gh-dash-theme)
 
 ## License
 

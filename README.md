@@ -22,12 +22,21 @@ An [Atuin](https://atuin.sh) shell-history theme built around the **Version 14**
    curl -o ~/.config/atuin/themes/version14.toml \
      https://raw.githubusercontent.com/version14/atuin-theme/main/version14.toml
    ```
+   or clone the repo (`git clone https://github.com/version14/atuin-theme`) to grab all three at once.
 2. In `~/.config/atuin/config.toml`, set:
    ```toml
    [theme]
    name = "version14"
    ```
 3. Restart your shell (or re-source it) to apply.
+
+### Verifying the install
+
+```sh
+atuin config get theme.name
+```
+
+Should print `version14` (or whichever variant you set) — note this only confirms `config.toml` was edited correctly, not that the theme *file* was found. `atuin config get` doesn't validate the file exists, so if colors don't look right in the actual search UI, also double-check the file is really at `~/.config/atuin/themes/version14.toml` (or your `$ATUIN_THEME_DIR`).
 
 Repeat with `version14-black` or `version14-light` for the other variants.
 

@@ -70,6 +70,7 @@ Atuin themes map semantic meanings to colors. See [Atuin's theming docs](https:/
 - [Ghostty](https://github.com/version14/ghostty-theme)
 - [Starship](https://github.com/version14/starship-theme)
 - [gh-dash](https://github.com/version14/gh-dash-theme)
+- [Helix](https://github.com/version14/helix-theme)
 
 ## License
 
